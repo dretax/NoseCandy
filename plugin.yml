@@ -1,0 +1,16 @@
+name: NoseCandy
+main: dretax.nosecandy.NoseCandy
+version: 1.6
+authors: [DirtyStarfish, DreTaX]
+depend: [Spout]
+commands:
+  drugs:
+    description: Spawn drug items
+    usage: /drugs
+  addiction:
+    description: Show addiction levels and drug usage
+    usage: /addiction
+permissions:
+  nosecandy.spawn:
+    description: Spawn new items.
+    default: op

@@ -1,15 +1,11 @@
 package dretax.nosecandy.addiction;
 
-import java.util.Map;
 import dretax.nosecandy.Config;
 import dretax.nosecandy.NoseCandy;
-import net.minecraft.server.v1_5_R2.EntityPlayer;
-import net.minecraft.server.v1_5_R2.MobEffect;
+import net.minecraft.server.v1_5_R3.MobEffect;
 import org.bukkit.Bukkit;
-import org.bukkit.Server;
-import org.bukkit.craftbukkit.v1_5_R2.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_5_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitScheduler;
 
 public class AddictionTask
 {
@@ -34,7 +30,7 @@ public class AddictionTask
 
           for (int i = 0; i < AddictionTask.this.players.length; i++) {
             AddictionTask.this.a = ((Addict)AddictionManager.addicts.get(AddictionTask.this.players[i].getName()));
-            if ((AddictionTask.this.a.getCocaineAddiction() > Config.withdrawal) || (AddictionTask.this.a.getWeedAddiction() > Config.withdrawal) || (AddictionTask.this.a.getHeroinAddiction() > Config.withdrawal) || (AddictionTask.this.a.getVodkaAddiction() > Config.withdrawal) || (AddictionTask.this.a.getGarrusPlateAddiction() > Config.withdrawal) || (AddictionTask.this.a.getBluePoisonAddiction() > Config.withdrawal) || (AddictionTask.this.a.getMagicMushroomAddiction() > Config.withdrawal)) {
+            if ((AddictionTask.this.a.getCocaineAddiction() > Config.withdrawal) || (AddictionTask.this.a.getWeedAddiction() > Config.withdrawal) || (AddictionTask.this.a.getHeroinAddiction() > Config.withdrawal) || (AddictionTask.this.a.getVodkaAddiction() > Config.withdrawal) || (AddictionTask.this.a.getGarrusPlateAddiction() > Config.withdrawal) || (AddictionTask.this.a.getBluePoisonAddiction() > Config.withdrawal) || (AddictionTask.this.a.getMagicMushroomAddiction() > Config.withdrawal) || (AddictionTask.this.a.getLSDAddiction() > Config.withdrawal) || (AddictionTask.this.a.getEcstacyAddiction() > Config.withdrawal) || (AddictionTask.this.a.getMethAddiction() > Config.withdrawal) || (AddictionTask.this.a.getJDBAddiction() > Config.withdrawal) || (AddictionTask.this.a.getJDOAddiction() > Config.withdrawal)) {
               AddictionTask.this.cp = ((CraftPlayer)AddictionTask.this.players[i]);
               AddictionTask.this.cp.getHandle().addEffect(new MobEffect(9, 300, 3));
               AddictionTask.this.cp.sendMessage(Config.addictionMsg);

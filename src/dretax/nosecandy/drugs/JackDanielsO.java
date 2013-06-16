@@ -15,26 +15,31 @@ import org.getspout.spoutapi.block.SpoutBlock;
 import org.getspout.spoutapi.player.SpoutPlayer;
 import org.getspout.spoutapi.sound.SoundManager;
 
-public class Szolo extends BaseDrug
+public class JackDanielsO extends BaseDrug
 {
 	Addict a;
 
-	public Szolo(NoseCandy plugin)
+	public JackDanielsO(NoseCandy plugin)
 	{
-		super(plugin, Config.SzoloName, Config.SzoloTex);
+		super(plugin, Config.vodkaName, Config.vodkaTex);
 	}
 
 	public boolean onItemInteract(SpoutPlayer player, SpoutBlock block, BlockFace face)
-  	{
+	{
 		CraftPlayer p = (CraftPlayer)player;
-		p.getHandle().addEffect(new MobEffect(5, 500, 3));
-		p.getHandle().addEffect(new MobEffect(10, 500, 3));
-		SpoutManager.getSoundManager().playCustomSoundEffect(NoseCandy.instance, player, "https://dl.dropbox.com/u/136953717/SandwichEat09.ogg", true);
-		consume(player);
+
+		SpoutManager.getSoundManager().playCustomSoundEffect(NoseCandy.instance, player, "http://dl.dropbox.com/u/41217801/SpoutDrugs/vodkaGlug.ogg", true);
+
+		p.getHandle().addEffect(new MobEffect(2, 300, 5));
+		p.getHandle().addEffect(new MobEffect(9, 300, 5));
+		p.getHandle().addEffect(new MobEffect(21, 1200, 5));
+
 		this.a = ((Addict)AddictionManager.addicts.get(player.getName()));
-		this.a.useSzolo();
+		this.a.useVodka();
+
+		consume(player);
 		return super.onItemInteract(player, block, face);
-  	}
+	}
 
 	private void consume(SpoutPlayer player)
 	{

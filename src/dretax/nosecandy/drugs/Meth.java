@@ -17,25 +17,25 @@ import org.getspout.spoutapi.block.SpoutBlock;
 import org.getspout.spoutapi.player.SpoutPlayer;
 import org.getspout.spoutapi.sound.SoundManager;
 
-public class GarrusPlate extends BaseDrug
+public class Meth extends BaseDrug
 {
 	Addict a;
 
- 	public GarrusPlate(NoseCandy plugin)
+ 	public Meth(NoseCandy plugin)
  	{
- 		super(plugin, Config.GarrusPlateName, Config.GarrusPlateTex);
+ 		super(plugin, Config.MethName, Config.MethTex);
  	}
 
  	public boolean onItemInteract(SpoutPlayer player, SpoutBlock block, BlockFace face)
  	{
  		CraftPlayer p = (CraftPlayer)player;
- 		p.getHandle().addEffect(new MobEffect(1, 1200, 3));
- 		p.getHandle().addEffect(new MobEffect(16, 1200, 1));
+ 		p.getHandle().addEffect(new MobEffect(5, 1200, 3));
+ 		p.getHandle().addEffect(new MobEffect(10, 1000, 3));
  		p.getHandle().addEffect(new MobEffect(9, 200, 2));
  		SpoutManager.getSoundManager().playCustomSoundEffect(NoseCandy.instance, player, "http://dl.dropbox.com/u/136953717/SandwichEat09.ogg", true);
  		consume(player);
  		this.a = ((Addict)AddictionManager.addicts.get(player.getName()));
-    	this.a.useGarrusPlate();
+    	this.a.useMeth();
     	return super.onItemInteract(player, block, face);
  	}
 

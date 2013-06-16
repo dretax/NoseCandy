@@ -65,6 +65,21 @@ public class AddictionCommand
       player.sendMessage("== Tokaji ==");
       player.sendMessage("Usage: " + a.getTokajiUse());
       player.sendMessage("Addiction: " + a.getTokajiAddiction());
+      player.sendMessage("== LSD ==");
+      player.sendMessage("Usage: " + a.getLSDUse());
+      player.sendMessage("Addiction: " + a.getLSDAddiction());
+      player.sendMessage("== Meth ==");
+      player.sendMessage("Usage: " + a.getMethUse());
+      player.sendMessage("Addiction: " + a.getMethAddiction());
+      player.sendMessage("== Ecstacy ==");
+      player.sendMessage("Usage: " + a.getEcstacyUse());
+      player.sendMessage("Addiction: " + a.getEcstacyAddiction());
+      player.sendMessage("== Jack Daniels Black ==");
+      player.sendMessage("Usage: " + a.getJDBUse());
+      player.sendMessage("Addiction: " + a.getJDBAddiction());
+      player.sendMessage("== Jack Daniels Origi ==");
+      player.sendMessage("Usage: " + a.getJDOUse());
+      player.sendMessage("Addiction: " + a.getJDOAddiction());
       
       return true;
     }

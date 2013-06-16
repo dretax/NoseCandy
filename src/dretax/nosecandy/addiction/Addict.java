@@ -2,38 +2,45 @@ package dretax.nosecandy.addiction;
 
 import java.util.Random;
 
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.getspout.spoutapi.material.MaterialData;
-
 public class Addict {
 	Random r = new Random();
-	private int cocaineUsage;
-	private int cocaineAddiction;
-	private int weedUsage;
-	private int weedAddiction;
-	private int heroinUsage;
-	private int heroinAddiction;
-	private int vodkaUsage;
-	private int vodkaAddiction;
-	private int GarrusPlateAddiction;
-	private int GarrusPlateUsage;
-	private int MagicMushroomAddiction;
-	private int MagicMushroomUsage;
-	private int BluePoisonAddiction;
-	private int BluePoisonUsage;
-	private int RoyalAddiction;
-	private int RoyalUsage;
-	private int AdderalAddiction;
-	private int AdderalUsage;
-	private int BorsodiAddiction;
-	private int BorsodiUsage;
-	private int SzoloAddiction;
-	private int SzoloUsage;
-	private int TokajiAddiction;
-	private int TokajiUsage;
-	private String name;
+	public static int cocaineUsage;
+	public static int cocaineAddiction;
+	public static int weedUsage;
+	public static int weedAddiction;
+	public static int heroinUsage;
+	public static int heroinAddiction;
+	public static int vodkaUsage;
+	public static int vodkaAddiction;
+	public static int GarrusPlateAddiction;
+	public static int GarrusPlateUsage;
+	public static int MagicMushroomAddiction;
+	public static int MagicMushroomUsage;
+	public static int BluePoisonAddiction;
+	public static int BluePoisonUsage;
+	public static int RoyalAddiction;
+	public static int RoyalUsage;
+	public static int AdderalAddiction;
+	public static int AdderalUsage;
+	public static int BorsodiAddiction;
+	public static int BorsodiUsage;
+	public static int SzoloAddiction;
+	public static int SzoloUsage;
+	public static int TokajiAddiction;
+	public static int TokajiUsage;
+	//2013.04.12
+	public static int LSDAddiction;
+	public static int LSDUsage;
+	public static int MethAddiction;
+	public static int MethUsage;
+	public static int EcstacyAddiction;
+	public static int EcstacyUsage;
+	//2013.06.16
+	public static int JDBAddiction;
+	public static int JDBUsage;
+	public static int JDOAddiction;
+	public static int JDOUsage;
+	protected String name;
 
 	public Addict(String player) {
 		this.name = player;
@@ -44,330 +51,437 @@ public class Addict {
 	}
 
 	public void newAddict() {
-		this.cocaineUsage = 0;
-		this.cocaineAddiction = 0;
-		this.weedUsage = 0;
-		this.weedAddiction = 0;
-		this.heroinUsage = 0;
-		this.heroinAddiction = 0;
-		this.vodkaUsage = 0;
-		this.vodkaAddiction = 0;
-		this.GarrusPlateUsage = 0;
-		this.GarrusPlateAddiction = 0;
-		this.MagicMushroomUsage = 0;
-		this.MagicMushroomAddiction = 0;
-		this.BluePoisonUsage = 0;
-		this.BluePoisonAddiction = 0;
-		this.RoyalUsage = 0;
-		this.RoyalAddiction = 0;
-		this.BorsodiUsage = 0;
-		this.BorsodiAddiction = 0;
-		this.AdderalUsage = 0;
-		this.AdderalAddiction = 0;
-		this.SzoloUsage = 0;
-		this.SzoloAddiction = 0;
-		this.TokajiUsage = 0;
-		this.TokajiAddiction = 0;
+		Addict.cocaineUsage = 0;
+		Addict.cocaineAddiction = 0;
+		Addict.weedUsage = 0;
+		Addict.weedAddiction = 0;
+		Addict.heroinUsage = 0;
+		Addict.heroinAddiction = 0;
+		Addict.vodkaUsage = 0;
+		Addict.vodkaAddiction = 0;
+		Addict.GarrusPlateUsage = 0;
+		Addict.GarrusPlateAddiction = 0;
+		Addict.MagicMushroomUsage = 0;
+		Addict.MagicMushroomAddiction = 0;
+		Addict.BluePoisonUsage = 0;
+		Addict.BluePoisonAddiction = 0;
+		Addict.RoyalUsage = 0;
+		Addict.RoyalAddiction = 0;
+		Addict.BorsodiUsage = 0;
+		Addict.BorsodiAddiction = 0;
+		Addict.AdderalUsage = 0;
+		Addict.AdderalAddiction = 0;
+		Addict.SzoloUsage = 0;
+		Addict.SzoloAddiction = 0;
+		Addict.TokajiUsage = 0;
+		Addict.TokajiAddiction = 0;
+		//2013.04.12
+		Addict.LSDUsage = 0;
+		Addict.LSDAddiction = 0;
+		Addict.MethUsage = 0;
+		Addict.MethAddiction = 0;
+		Addict.EcstacyUsage = 0;
+		Addict.EcstacyAddiction = 0;
+		//2013.06.16
+		Addict.JDOUsage = 0;
+		Addict.JDOAddiction = 0;
+		Addict.JDBUsage = 0;
+		Addict.JDBAddiction = 0;
 	}
 
 	public int getCocaineUse() {
-		return this.cocaineUsage;
+		return Addict.cocaineUsage;
 	}
 
 	public void useCocaine() {
-		this.cocaineUsage += 1;
+		Addict.cocaineUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.cocaineAddiction += 1;
+			Addict.cocaineAddiction += 1;
 	}
 
 	public int getCocaineAddiction() {
-		return this.cocaineAddiction;
+		return Addict.cocaineAddiction;
 	}
 
 	public void lowerCocaineAddiction() {
-		if (this.cocaineAddiction > 1)
-			this.cocaineAddiction -= 1;
+		if (Addict.cocaineAddiction > 1)
+			Addict.cocaineAddiction -= 1;
 	}
 
 	public void setInfo(int cu, int ca, int wu, int wa, int hu, int ha, int vu,
 			int va, int mu, int ma, int bu, int ba, int gu, int ga, int bou, int boa,
-			int adu, int ada, int ru, int ra, int szu, int sza, int tou, int toa) {
-		this.cocaineUsage = cu;
-		this.cocaineAddiction = ca;
-		this.weedUsage = wu;
-		this.weedAddiction = wa;
-		this.heroinUsage = hu;
-		this.heroinAddiction = ha;
-		this.vodkaUsage = vu;
-		this.vodkaAddiction = va;
-		this.MagicMushroomUsage = mu;
-		this.MagicMushroomAddiction = ma;
-		this.BluePoisonUsage = bu;
-		this.BluePoisonAddiction = ba;
-		this.BorsodiUsage = bou;
-		this.BorsodiAddiction = boa;
-		this.AdderalUsage = adu;
-		this.AdderalAddiction = ada;
-		this.RoyalUsage = ru;
-		this.RoyalAddiction = ra;
-		this.SzoloUsage = szu;
-		this.SzoloAddiction = sza;
-		this.TokajiUsage = tou;
-		this.TokajiAddiction = toa;
-		this.GarrusPlateUsage = gu;
-		this.GarrusPlateAddiction = ga;
+			int adu, int ada, int ru, int ra, int szu, int sza, int tou, int toa, int ecsa,
+			int ecsu, int lsda, int lsdu, int metha, int methu, int jdbu, int jdba, int jdou, int jdoa) {
+		Addict.cocaineUsage = cu;
+		Addict.cocaineAddiction = ca;
+		Addict.weedUsage = wu;
+		Addict.weedAddiction = wa;
+		Addict.heroinUsage = hu;
+		Addict.heroinAddiction = ha;
+		Addict.vodkaUsage = vu;
+		Addict.vodkaAddiction = va;
+		Addict.MagicMushroomUsage = mu;
+		Addict.MagicMushroomAddiction = ma;
+		Addict.BluePoisonUsage = bu;
+		Addict.BluePoisonAddiction = ba;
+		Addict.BorsodiUsage = bou;
+		Addict.BorsodiAddiction = boa;
+		Addict.AdderalUsage = adu;
+		Addict.AdderalAddiction = ada;
+		Addict.RoyalUsage = ru;
+		Addict.RoyalAddiction = ra;
+		Addict.SzoloUsage = szu;
+		Addict.SzoloAddiction = sza;
+		Addict.TokajiUsage = tou;
+		Addict.TokajiAddiction = toa;
+		Addict.GarrusPlateUsage = gu;
+		Addict.GarrusPlateAddiction = ga;
+		//2013.04.12
+		Addict.MethUsage = methu;
+		Addict.MethAddiction = metha;
+		Addict.LSDUsage = lsdu;
+		Addict.LSDAddiction = lsda;
+		Addict.EcstacyUsage = ecsu;
+		Addict.EcstacyAddiction = ecsa;
+		//2013.06.16
+		Addict.JDOUsage = jdou;
+		Addict.JDOAddiction = jdoa;
+		Addict.JDBUsage = jdbu;
+		Addict.JDBAddiction = jdba;
 	}
 
 	public int getWeedUse() {
-		return this.weedUsage;
+		return Addict.weedUsage;
 	}
 
 	public void useWeed() {
-		this.weedUsage += 1;
+		Addict.weedUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.weedAddiction += 1;
+			Addict.weedAddiction += 1;
 	}
 
 	public int getWeedAddiction() {
-		return this.weedAddiction;
+		return Addict.weedAddiction;
 	}
 
 	public void lowerWeedAddiction() {
-		if (this.weedAddiction > 1)
-			this.weedAddiction -= 1;
+		if (Addict.weedAddiction > 1)
+			Addict.weedAddiction -= 1;
 	}
 
 	public int getHeroinUse() {
-		return this.heroinUsage;
+		return Addict.heroinUsage;
 	}
 
 	public void useHeroin() {
-		this.heroinUsage += 1;
+		Addict.heroinUsage += 1;
 		if (this.r.nextInt(2) == 1)
-			this.heroinAddiction += 1;
+			Addict.heroinAddiction += 1;
 	}
 
 	public int getHeroinAddiction() {
-		return this.heroinAddiction;
+		return Addict.heroinAddiction;
 	}
 
 	public void lowerHeroinAddiction() {
-		if (this.heroinAddiction > 1)
-			this.heroinAddiction -= 1;
+		if (Addict.heroinAddiction > 1)
+			Addict.heroinAddiction -= 1;
 	}
 
 	public int getVodkaUse() {
-		return this.vodkaUsage;
+		return Addict.vodkaUsage;
 	}
 
 	public void useVodka() {
-		this.vodkaUsage += 1;
+		Addict.vodkaUsage += 1;
 		if (this.r.nextInt(2) == 1)
-			this.vodkaAddiction += 1;
+			Addict.vodkaAddiction += 1;
 	}
 
 	public int getVodkaAddiction() {
-		return this.vodkaAddiction;
+		return Addict.vodkaAddiction;
 	}
 
 	public void lowerVodkaAddiction() {
-		if (this.vodkaAddiction > 1)
-			this.vodkaAddiction -= 1;
+		if (Addict.vodkaAddiction > 1)
+			Addict.vodkaAddiction -= 1;
 	}
 
 	public int getGarrusPlateUse() {
-		return this.GarrusPlateUsage;
+		return Addict.GarrusPlateUsage;
 	}
 
 	public void useGarrusPlate() {
-		this.GarrusPlateUsage += 1;
+		Addict.GarrusPlateUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.GarrusPlateAddiction += 1;
+			Addict.GarrusPlateAddiction += 1;
 
 	}
 
 	public int getGarrusPlateAddiction() {
-		return this.GarrusPlateAddiction;
+		return Addict.GarrusPlateAddiction;
 	}
 
 	public void lowerGarrusPlateAddiction() {
-		if (this.GarrusPlateAddiction > 1)
-			this.GarrusPlateAddiction -= 1;
+		if (Addict.GarrusPlateAddiction > 1)
+			Addict.GarrusPlateAddiction -= 1;
 	}
 
 	public int getMagicMushroomUse() {
-		return this.MagicMushroomUsage;
+		return Addict.MagicMushroomUsage;
 	}
 
 	public void useMagicMushroom() {
-		this.MagicMushroomUsage += 1;
+		Addict.MagicMushroomUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.MagicMushroomAddiction += 1;
+			Addict.MagicMushroomAddiction += 1;
 
 	}
 
 	public int getMagicMushroomAddiction() {
-		return this.MagicMushroomAddiction;
+		return Addict.MagicMushroomAddiction;
 	}
 
 	public void lowerMagicMushroomAddiction() {
-		if (this.MagicMushroomAddiction > 1)
-			this.MagicMushroomAddiction -= 1;
+		if (Addict.MagicMushroomAddiction > 1)
+			Addict.MagicMushroomAddiction -= 1;
 	}
 
 	public int getBluePoisonUse() {
-		return this.BluePoisonUsage;
+		return Addict.BluePoisonUsage;
 	}
 
 	public void useBluePoison() {
-		this.BluePoisonUsage += 1;
+		Addict.BluePoisonUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.BluePoisonAddiction += 1;
+			Addict.BluePoisonAddiction += 1;
 
 	}
 
 	public int getBluePoisonAddiction() {
-		return this.BluePoisonAddiction;
+		return Addict.BluePoisonAddiction;
 	}
 
 	public void lowerBluePoisonAddiction() {
-		if (this.BluePoisonAddiction > 1)
-			this.BluePoisonAddiction -= 1;
+		if (Addict.BluePoisonAddiction > 1)
+			Addict.BluePoisonAddiction -= 1;
 	}
 	
 	//NEW DRUGS FROM HERE 2013.02.19 (Reminding)
 	
 	public int getRoyalUse() {
-		return this.RoyalUsage;
+		return Addict.RoyalUsage;
 	}
 
 	public void useRoyal() {
-		this.RoyalUsage += 1;
+		Addict.RoyalUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.RoyalAddiction += 1;
+			Addict.RoyalAddiction += 1;
 
 	}
 
 	public int getRoyalAddiction() {
-		return this.RoyalAddiction;
+		return Addict.RoyalAddiction;
 	}
 
 	public void lowerRoyalAddiction() {
-		if (this.RoyalAddiction > 1)
-			this.RoyalAddiction -= 1;
+		if (Addict.RoyalAddiction > 1)
+			Addict.RoyalAddiction -= 1;
 	}
 	
 	public int getAdderalUse() {
-		return this.AdderalUsage;
+		return Addict.AdderalUsage;
 	}
 
 	public void useAdderal() {
-		this.AdderalUsage += 1;
+		Addict.AdderalUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.AdderalAddiction += 1;
+			Addict.AdderalAddiction += 1;
 
 	}
 
 	public int getAdderalAddiction() {
-		return this.AdderalAddiction;
+		return Addict.AdderalAddiction;
 	}
 
 	public void lowerAdderalAddiction() {
-		if (this.AdderalAddiction > 1)
-			this.AdderalAddiction -= 1;
+		if (Addict.AdderalAddiction > 1)
+			Addict.AdderalAddiction -= 1;
 	}
 	
 	public int getSzoloUse() {
-		return this.SzoloUsage;
+		return Addict.SzoloUsage;
 	}
 
 	public void useSzolo() {
-		this.SzoloUsage += 1;
+		Addict.SzoloUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.SzoloAddiction += 1;
+			Addict.SzoloAddiction += 1;
 
 	}
 
 	public int getSzoloAddiction() {
-		return this.SzoloAddiction;
+		return Addict.SzoloAddiction;
 	}
 
 	public void lowerSzoloAddiction() {
-		if (this.SzoloAddiction > 1)
-			this.SzoloAddiction -= 1;
+		if (Addict.SzoloAddiction > 1)
+			Addict.SzoloAddiction -= 1;
 	}
 	
 	public int getTokajiUse() {
-		return this.TokajiUsage;
+		return Addict.TokajiUsage;
 	}
 
 	public void useTokaji() {
-		this.TokajiUsage += 1;
+		Addict.TokajiUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.TokajiAddiction += 1;
+			Addict.TokajiAddiction += 1;
 
 	}
 
 	public int getTokajiAddiction() {
-		return this.TokajiAddiction;
+		return Addict.TokajiAddiction;
 	}
 
 	public void lowerTokajiAddiction() {
-		if (this.TokajiAddiction > 1)
-			this.TokajiAddiction -= 1;
+		if (Addict.TokajiAddiction > 1)
+			Addict.TokajiAddiction -= 1;
 	}
 	
 	public int getBorsodiUse() {
-		return this.BorsodiUsage;
+		return Addict.BorsodiUsage;
 	}
 
 	public void useBorsodi() {
-		this.BorsodiUsage += 1;
+		Addict.BorsodiUsage += 1;
 		if (this.r.nextInt(3) == 1)
-			this.BorsodiAddiction += 1;
+			Addict.BorsodiAddiction += 1;
 
 	}
 
 	public int getBorsodiAddiction() {
-		return this.BorsodiAddiction;
+		return Addict.BorsodiAddiction;
 	}
 
 	public void lowerBorsodiAddiction() {
-		if (this.BorsodiAddiction > 1)
-			this.BorsodiAddiction -= 1;
+		if (Addict.BorsodiAddiction > 1)
+			Addict.BorsodiAddiction -= 1;
+	}
+	
+	/*
+	 * 2013.04.12
+	 */
+	
+	public int getLSDUse() {
+		return Addict.LSDUsage;
 	}
 
-	@EventHandler
-	public void onDrinkMilk(PlayerInteractEvent event) {
-		if ((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) && event.getPlayer().getItemInHand() == MaterialData.milk) {
-			if (this.BluePoisonAddiction > 1)
-				this.BluePoisonAddiction -= 1;
-			if (this.MagicMushroomAddiction > 1)
-				this.MagicMushroomAddiction -= 1;
-			if (this.GarrusPlateAddiction > 1)
-				this.GarrusPlateAddiction -= 1;
-			if (this.vodkaAddiction > 1)
-				this.vodkaAddiction -= 1;
-			if (this.heroinAddiction > 1)
-				this.heroinAddiction -= 1;
-			if (this.weedAddiction > 1)
-				this.weedAddiction -= 1;
-			if (this.AdderalAddiction > 1)
-				this.AdderalAddiction -= 1;
-			if (this.BorsodiAddiction > 1)
-				this.BorsodiAddiction -= 1;
-			if (this.RoyalAddiction > 1)
-				this.RoyalAddiction -= 1;
-			if (this.SzoloAddiction > 1)
-				this.SzoloAddiction -= 1;
-			if (this.TokajiAddiction > 1)
-				this.TokajiAddiction -= 1;
-		}
+	public void useLSD() {
+		Addict.LSDUsage += 1;
+		if (this.r.nextInt(3) == 1)
+			Addict.LSDAddiction += 1;
+
 	}
 
+	public int getLSDAddiction() {
+		return Addict.LSDAddiction;
+	}
+
+	public void lowerLSDAddiction() {
+		if (Addict.LSDAddiction > 1)
+			Addict.LSDAddiction -= 1;
+	}
+	
+	public int getMethUse() {
+		return Addict.MethUsage;
+	}
+
+	public void useMeth() {
+		Addict.MethUsage += 1;
+		if (this.r.nextInt(3) == 1)
+			Addict.MethAddiction += 1;
+
+	}
+
+	public int getMethAddiction() {
+		return Addict.MethAddiction;
+	}
+
+	public void lowerMethAddiction() {
+		if (Addict.MethAddiction > 1)
+			Addict.MethAddiction -= 1;
+	}
+	
+	public int getEcstacyUse() {
+		return Addict.EcstacyUsage;
+	}
+
+	public void useEcstacy() {
+		Addict.EcstacyUsage += 1;
+		if (this.r.nextInt(3) == 1)
+			Addict.EcstacyAddiction += 1;
+
+	}
+
+	public int getEcstacyAddiction() {
+		return Addict.EcstacyAddiction;
+	}
+
+	public void lowerEcstacyAddiction() {
+		if (Addict.EcstacyAddiction > 1)
+			Addict.EcstacyAddiction -= 1;
+	}
+	
+	/*
+	 * 2013.06.16
+	 */
+	
+	public int getJDOUse() {
+		return Addict.JDOUsage;
+	}
+
+	public void useJDO() {
+		Addict.JDOUsage += 1;
+		if (this.r.nextInt(3) == 1)
+			Addict.JDOAddiction += 1;
+
+	}
+
+	public int getJDOAddiction() {
+		return Addict.JDOAddiction;
+	}
+
+	public void lowerJDOAddiction() {
+		if (Addict.JDOAddiction > 1)
+			Addict.JDOAddiction -= 1;
+	}
+	
+	//VALASZTOVONAL
+	
+	public int getJDBUse() {
+		return Addict.JDBUsage;
+	}
+
+	public void useJDB() {
+		Addict.JDBUsage += 1;
+		if (this.r.nextInt(3) == 1)
+			Addict.JDBAddiction += 1;
+
+	}
+
+	public int getJDBAddiction() {
+		return Addict.JDBAddiction;
+	}
+
+	public void lowerJDBAddiction() {
+		if (Addict.JDBAddiction > 1)
+			Addict.JDBAddiction -= 1;
+	}
+	
 	public void setInfo(int int1, int int2, int int3, int int4, int int5,
 			int int6, int int7, int int8, int int9, int int10, int int11,
-			int int12, int int13) {
+			int int12, int int13, int int14, int int15, int int16, int int17, int int18) {
 		// TODO Auto-generated method stub
 		
 	}

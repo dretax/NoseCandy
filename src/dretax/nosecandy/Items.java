@@ -11,50 +11,62 @@ import dretax.nosecandy.paraphernalia.RollingPapers;
 
 public class Items
 {
-  public static EmptyBong emptyBong;
-  public static LoadedBong loadedBong;
-  public static EmptySyringe emptySyringe;
-  public static HeroinSyringe heroinSyringe;
-  public static RollingPapers rollingPapers;
-  public static Cocaine cocaine;
-  public static Weed weed;
-  public static Spliff spliff;
-  public static GlassPipe glassPipe;
-  public static Heroin heroin;
-  public static Vodka vodka;
-  public static Fertilizer fertilizer;
-  public static GarrusPlate GarrusPlate;
-  public static BluePoison BluePoison;
-  public static MagicMushroom MagicMushroom;
-  public static Royal Royal;
-  public static Adderal Adderal;
-  public static Borsodi Borsodi;
-  public static Szolo Szolo;
-  public static Tokaji Tokaji;
-  public static Komlo Komlo;
+	public static EmptyBong emptyBong;
+  	public static LoadedBong loadedBong;
+  	public static EmptySyringe emptySyringe;
+  	public static HeroinSyringe heroinSyringe;
+  	public static RollingPapers rollingPapers;
+  	public static Cocaine cocaine;
+  	public static Weed weed;
+  	public static Spliff spliff;
+  	public static GlassPipe glassPipe;
+  	public static Heroin heroin;
+  	public static Vodka vodka;
+  	public static Fertilizer fertilizer;
+  	public static GarrusPlate GarrusPlate;
+  	public static BluePoison BluePoison;
+  	public static MagicMushroom MagicMushroom;
+  	public static Royal Royal;
+  	public static Adderal Adderal;
+  	public static Borsodi Borsodi;
+  	public static Szolo Szolo;
+  	public static Tokaji Tokaji;
+  	public static Komlo Komlo;
+  	public static LSD LSD;
+  	public static Meth Meth;
+  	public static Ecstacy Ecstacy;
+  	public static DrugSeeds DrugSeeds;
+  	public static JackDanielsO JDO;
+  	public static JackDanielsB JDB;
 
-  public Items()
-  {
-    emptyBong = new EmptyBong(NoseCandy.instance);
-    loadedBong = new LoadedBong(NoseCandy.instance);
-    emptySyringe = new EmptySyringe(NoseCandy.instance);
-    heroinSyringe = new HeroinSyringe(NoseCandy.instance);
-    rollingPapers = new RollingPapers(NoseCandy.instance);
-    cocaine = new Cocaine(NoseCandy.instance);
-    weed = new Weed(NoseCandy.instance);
-    spliff = new Spliff(NoseCandy.instance);
-    glassPipe = new GlassPipe(NoseCandy.instance);
-    heroin = new Heroin(NoseCandy.instance);
-    vodka = new Vodka(NoseCandy.instance);
-    fertilizer = new Fertilizer(NoseCandy.instance);
-    GarrusPlate = new GarrusPlate(NoseCandy.instance);
-    MagicMushroom = new MagicMushroom(NoseCandy.instance);
-    BluePoison = new BluePoison(NoseCandy.instance);
-    Adderal = new Adderal(NoseCandy.instance);
-    Borsodi = new Borsodi(NoseCandy.instance);
-    Royal = new Royal(NoseCandy.instance);
-    Szolo = new Szolo(NoseCandy.instance);
-    Tokaji = new Tokaji(NoseCandy.instance);
-    Komlo = new Komlo(NoseCandy.instance);
-  }
+	public Items()
+	{
+		emptyBong = new EmptyBong(NoseCandy.instance);
+		loadedBong = new LoadedBong(NoseCandy.instance);
+		emptySyringe = new EmptySyringe(NoseCandy.instance);
+		heroinSyringe = new HeroinSyringe(NoseCandy.instance);
+		rollingPapers = new RollingPapers(NoseCandy.instance);
+		cocaine = new Cocaine(NoseCandy.instance);
+		weed = new Weed(NoseCandy.instance);
+		spliff = new Spliff(NoseCandy.instance);
+		glassPipe = new GlassPipe(NoseCandy.instance);
+		heroin = new Heroin(NoseCandy.instance);
+		vodka = new Vodka(NoseCandy.instance);
+		fertilizer = new Fertilizer(NoseCandy.instance);
+		GarrusPlate = new GarrusPlate(NoseCandy.instance);
+		MagicMushroom = new MagicMushroom(NoseCandy.instance);
+		BluePoison = new BluePoison(NoseCandy.instance);
+    	Adderal = new Adderal(NoseCandy.instance);
+    	Borsodi = new Borsodi(NoseCandy.instance);
+    	Royal = new Royal(NoseCandy.instance);
+    	Szolo = new Szolo(NoseCandy.instance);
+    	Tokaji = new Tokaji(NoseCandy.instance);
+    	Komlo = new Komlo(NoseCandy.instance);
+    	LSD = new LSD(NoseCandy.instance);
+    	Ecstacy = new Ecstacy(NoseCandy.instance);
+    	Meth = new Meth(NoseCandy.instance);
+    	DrugSeeds = new DrugSeeds(NoseCandy.instance);
+    	JDO = new JackDanielsO(NoseCandy.instance);
+    	JDB = new JackDanielsB(NoseCandy.instance);
+	}
 }

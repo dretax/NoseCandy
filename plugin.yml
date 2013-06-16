@@ -1,7 +1,7 @@
 name: NoseCandy
 main: dretax.nosecandy.NoseCandy
-version: 1.6
-authors: [DirtyStarfish, DreTaX]
+version: 1.8
+authors: [DirtyStarfish, DreTaX, Gartand]
 depend: [Spout]
 commands:
   drugs:

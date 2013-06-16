@@ -1,10 +1,6 @@
 package dretax.nosecandy;
 
 import java.io.File;
-import java.util.logging.Logger;
-
-import org.bukkit.ChatColor;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -30,6 +26,12 @@ public class Config {
 	public static String RoyalTex;
 	public static String TokajiTex;
 	public static String komloTex;
+	public static String LSDTex;
+	public static String EcstacyTex;
+	public static String MethTex;
+	public static String DrugSeedsTex;
+	public static String JDOTex;
+	public static String JDBTex;
 	public static boolean hardcore;
 	public static String cocaineName;
 	public static String weedName;
@@ -51,7 +53,13 @@ public class Config {
 	public static String RoyalName;
 	public static String TokajiName;
 	public static String komloName;
+	public static String LSDName;
+	public static String EcstacyName;
+	public static String MethName;
+	public static String DrugSeedsName;
 	public static String addictionMsg;
+	public static String JDOName;
+	public static String JDBName;
 	public static int withdrawal;
 	public static int cocaineChance;
 	public static int weedChance;
@@ -64,6 +72,11 @@ public class Config {
 	public static int BorsodiChance;
 	public static int RoyalChance;
 	public static int TokajiChance;
+	public static int LSDChance;
+	public static int EcstacyChance;
+	public static int MethChance;
+	public static int JDOChance;
+	public static int JDBChance;
 	public static File ncFolder;
 	public static File configFile;
 	public static FileConfiguration config;
@@ -103,6 +116,11 @@ public class Config {
 				config.set("Increase addiction chance.Adderal", Integer.valueOf(25));
 				config.set("Increase addiction chance.Royal", Integer.valueOf(25));
 				config.set("Increase addiction chance.Borsodi", Integer.valueOf(25));
+				config.set("Increase addiction chance.LSD", Integer.valueOf(30));
+				config.set("Increase addiction chance.Ecstacy", Integer.valueOf(25));
+				config.set("Increase addiction chance.Meth", Integer.valueOf(30));
+				config.set("Increase addiction chance.JDB", Integer.valueOf(35));
+				config.set("Increase addiction chance.JDO", Integer.valueOf(25));
 				config.set("Cocaine.URL", "http://dl.dropbox.com/u/41217801/SpoutDrugs/Cocaine.png");
 				config.set("Weed.URL", "http://dl.dropbox.com/u/136953717/marijuanaleaf.png");
 				config.set("LoadedBong.URL", "http://dl.dropbox.com/u/41217801/SpoutDrugs/LoadedBong.png");
@@ -124,6 +142,12 @@ public class Config {
 				config.set("Szolo.URL", "http://dl.dropbox.com/u/136953717/szolo.png");
 				config.set("Tokaji.URL", "http://dl.dropbox.com/u/136953717/tokaji.png");
 				config.set("Komlo.URL", "http://dl.dropbox.com/u/136953717/hophop.png");
+				config.set("LSD.URL", "http://dl.dropboxusercontent.com/u/136953717/lsd.png");
+				config.set("Meth.URL", "http://dl.dropboxusercontent.com/u/136953717/meth.png");
+				config.set("Ecstacy.URL", "http://dl.dropboxusercontent.com/u/136953717/ecstasy.png");
+				config.set("DrugSeeds.URL", "http://dl.dropboxusercontent.com/u/136953717/seeds.png");
+				config.set("JDB.URL", "http://dl.dropboxusercontent.com/u/136953717/jackdanielsblack.png");
+				config.set("JDO.URL", "http://dl.dropboxusercontent.com/u/136953717/jackdanielsorigi.png");
 
 				config.set("Cocaine.Name", "Cocaine");
 				config.set("Weed.Name", "Weed");
@@ -145,6 +169,12 @@ public class Config {
 				config.set("Szolo.Name", "Grape");
 				config.set("Tokaji.Name", "Hungarian Tokaji");
 				config.set("Komlo.Name", "Hop");
+				config.set("LSD.Name", "LSD");
+				config.set("Meth.Name", "Meth");
+				config.set("Ecstacy.Name", "Ecstasy");
+				config.set("DrugSeeds.Name", "Drug Seeds");
+				config.set("JDB.Name", "Jack Daniels Black");
+				config.set("JDO.Name", "Jack Daniels Origi");
 				try {
 					config.save(configFile);
 				} catch (Exception e) {
@@ -178,6 +208,11 @@ public class Config {
 		BorsodiChance = config.getInt("Increase addiction chance.Borsodi");
 		SzoloChance = config.getInt("Increase addiction chance.Szolo");
 		TokajiChance = config.getInt("Increase addiction chance.Tokaji");
+		LSDChance = config.getInt("Increase addiction chance.LSD");
+		MethChance = config.getInt("Increase addiction chance.Meth");
+		EcstacyChance = config.getInt("Increase addiction chance.Ecstacy");
+		JDOChance = config.getInt("Increase addiction chance.JDO");
+		JDBChance = config.getInt("Increase addiction chance.JDB");
 
 		cocaineTex = config.getString("Cocaine.URL");
 		weedTex = config.getString("Weed.URL");
@@ -200,6 +235,12 @@ public class Config {
 		AdderalTex = config.getString("Adderal.URL");
 		SzoloTex = config.getString("Szolo.URL");
 		TokajiTex = config.getString("Tokaji.URL");
+		LSDTex = config.getString("LSD.URL");
+		MethTex = config.getString("Meth.URL");
+		EcstacyTex = config.getString("Ecstacy.URL");
+		DrugSeedsTex = config.getString("DrugSeeds.URL");
+		JDOTex = config.getString("JDO.URL");
+		JDBTex = config.getString("JDB.URL");
 
 		cocaineName = config.getString("Cocaine.Name");
 		weedName = config.getString("Weed.Name");
@@ -221,6 +262,12 @@ public class Config {
 		SzoloName = config.getString("Szolo.Name");
 		TokajiName = config.getString("Tokaji.Name");
 		komloName = config.getString("Komlo.Name");
+		LSDName = config.getString("LSD.Name");
+		MethName = config.getString("Meth.Name");
+		EcstacyName = config.getString("Ecstacy.Name");
+		DrugSeedsName = config.getString("DrugSeeds.Name");
+		JDOName = config.getString("JDO.Name");
+		JDBName = config.getString("JDB.Name");
 
 		NoseCandy.log.info("[NoseCandy] Config file loaded.");
 	}

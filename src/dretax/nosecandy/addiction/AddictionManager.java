@@ -46,6 +46,11 @@ public class AddictionManager
       player.set("Addiction.Royal", Integer.valueOf(0));
       player.set("Addiction.Szolo", Integer.valueOf(0));
       player.set("Addiction.Tokaji", Integer.valueOf(0));
+      player.set("Addiction.Meth", Integer.valueOf(0));
+      player.set("Addiction.LSD", Integer.valueOf(0));
+      player.set("Addiction.Ecstacy", Integer.valueOf(0));
+      player.set("Addiction.JDB", Integer.valueOf(0));
+      player.set("Addiction.JDO", Integer.valueOf(0));
 
       player.set("Drug use.Cocaine", Integer.valueOf(0));
       player.set("Drug use.Weed", Integer.valueOf(0));
@@ -59,11 +64,16 @@ public class AddictionManager
       player.set("Drug use.Royal", Integer.valueOf(0));
       player.set("Drug use.Szolo", Integer.valueOf(0));
       player.set("Drug use.Tokaji", Integer.valueOf(0));
+      player.set("Drug use.LSD", Integer.valueOf(0));
+      player.set("Drug use.Meth", Integer.valueOf(0));
+      player.set("Drug use.Ecstacy", Integer.valueOf(0));
+      player.set("Drug use.JDB", Integer.valueOf(0));
+      player.set("Drug use.JDO", Integer.valueOf(0));
       try
       {
-        player.save(playerFile);
-      } catch (Exception e) {
-        e.printStackTrace();
+      		player.save(playerFile);
+      	} catch (Exception e) {
+      		e.printStackTrace();
       }
 
       Addict a = new Addict(name);
@@ -83,7 +93,7 @@ public class AddictionManager
       e.printStackTrace();
     }
 
-    a.setInfo(player.getInt("Drug use.Cocaine"), player.getInt("Addiction.Cocaine"), player.getInt("Drug use.Weed"), player.getInt("Addiction.Weed"), player.getInt("Drug use.Heroin"), player.getInt("Addiction.Heroin"), player.getInt("Drug use.Vodka"), player.getInt("Addiction.Vodka"), player.getInt("Addiction.Adderal"), player.getInt("Addiction.Borsodi"), player.getInt("Addiction.Royal"), player.getInt("Addiction.Szolo"), player.getInt("Addiction.Tokaji"));
+    a.setInfo(player.getInt("Drug use.Cocaine"), player.getInt("Addiction.Cocaine"), player.getInt("Drug use.Weed"), player.getInt("Addiction.Weed"), player.getInt("Drug use.Heroin"), player.getInt("Addiction.Heroin"), player.getInt("Drug use.Vodka"), player.getInt("Addiction.Vodka"), player.getInt("Addiction.Adderal"), player.getInt("Addiction.Borsodi"), player.getInt("Addiction.Royal"), player.getInt("Addiction.Szolo"), player.getInt("Addiction.Tokaji"), player.getInt("Addiction.LSD"), player.getInt("Addiction.Meth"), player.getInt("Addiction.Ecstacy"), player.getInt("Addiction.JDB"), player.getInt("Addiction.JDO"));
     addicts.put(name, a);
   }
 
@@ -103,12 +113,17 @@ public class AddictionManager
     player.set("Addiction.GarrusPlate", Integer.valueOf(a.getGarrusPlateAddiction()));
     player.set("Addiction.MagicMushroom", Integer.valueOf(a.getMagicMushroomAddiction()));
     player.set("Addiction.BluePoison", Integer.valueOf(a.getBluePoisonAddiction()));
-    player.set("Addiction.Adderal", Integer.valueOf(a.getBluePoisonAddiction()));
-    player.set("Addiction.Borsodi", Integer.valueOf(a.getBluePoisonAddiction()));
-    player.set("Addiction.Royal", Integer.valueOf(a.getBluePoisonAddiction()));
-    player.set("Addiction.Szolo", Integer.valueOf(a.getBluePoisonAddiction()));
-    player.set("Addiction.Tokaji", Integer.valueOf(a.getBluePoisonAddiction()));
-
+    player.set("Addiction.Adderal", Integer.valueOf(a.getAdderalAddiction()));
+    player.set("Addiction.Borsodi", Integer.valueOf(a.getBorsodiAddiction()));
+    player.set("Addiction.Royal", Integer.valueOf(a.getRoyalAddiction()));
+    player.set("Addiction.Szolo", Integer.valueOf(a.getSzoloAddiction()));
+    player.set("Addiction.Tokaji", Integer.valueOf(a.getTokajiAddiction()));
+    player.set("Addiction.Ecstacy", Integer.valueOf(a.getEcstacyAddiction()));
+    player.set("Addiction.Meth", Integer.valueOf(a.getMethAddiction()));
+    player.set("Addiction.LSD", Integer.valueOf(a.getLSDAddiction()));
+    player.set("Addiction.JDO", Integer.valueOf(a.getLSDAddiction()));
+    player.set("Addiction.JDB", Integer.valueOf(a.getLSDAddiction()));
+    
     player.set("Drug use.Cocaine", Integer.valueOf(a.getCocaineUse()));
     player.set("Drug use.Weed", Integer.valueOf(a.getWeedUse()));
     player.set("Drug use.Heroin", Integer.valueOf(a.getHeroinUse()));
@@ -116,11 +131,16 @@ public class AddictionManager
     player.set("Drug use.GarrusPlate", Integer.valueOf(a.getGarrusPlateUse()));
     player.set("Drug use.MagicMushroom", Integer.valueOf(a.getMagicMushroomUse()));
     player.set("Drug use.BluePoison", Integer.valueOf(a.getBluePoisonUse()));
-    player.set("Drug use.Adderal", Integer.valueOf(a.getBluePoisonUse()));
-    player.set("Drug use.Borsodi", Integer.valueOf(a.getBluePoisonUse()));
-    player.set("Drug use.Royal", Integer.valueOf(a.getBluePoisonUse()));
-    player.set("Drug use.Szolo", Integer.valueOf(a.getBluePoisonUse()));
-    player.set("Drug use.Tokaji", Integer.valueOf(a.getBluePoisonUse()));
+    player.set("Drug use.Adderal", Integer.valueOf(a.getAdderalUse()));
+    player.set("Drug use.Borsodi", Integer.valueOf(a.getBorsodiUse()));
+    player.set("Drug use.Royal", Integer.valueOf(a.getRoyalUse()));
+    player.set("Drug use.Szolo", Integer.valueOf(a.getSzoloUse()));
+    player.set("Drug use.Tokaji", Integer.valueOf(a.getTokajiUse()));
+    player.set("Drug use.Ecstacy", Integer.valueOf(a.getEcstacyUse()));
+    player.set("Drug use.LSD", Integer.valueOf(a.getLSDUse()));
+    player.set("Drug use.Meth", Integer.valueOf(a.getMethUse()));
+    player.set("Drug use.JDO", Integer.valueOf(a.getMethUse()));
+    player.set("Drug use.JDB", Integer.valueOf(a.getMethUse()));
     try
     {
       player.save(playerFile);

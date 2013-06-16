@@ -52,6 +52,11 @@ public class NoseCandyCommands
         player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.Szolo, 1) });
         player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.Tokaji, 1) });
         player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.Komlo, 1) });
+        player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.Ecstacy, 1) });
+        player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.Meth, 1) });
+        player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.LSD, 1) });
+        player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.JDB, 1) });
+        player.getInventory().addItem(new ItemStack[] { new SpoutItemStack(Items.JDO, 1) });
       }
 
       return true;
